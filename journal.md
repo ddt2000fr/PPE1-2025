@@ -11,11 +11,16 @@ Les exercices 1 et 2a de la nouvelle feuille n'étaient pas très compliqués et
 
 ## 21/10/2025
 La description du code du diapo Unix.
+
 Le programme accepte un seul argument, qui est un fichier contenant une liste de liens URL.
+
 Si le nombre d’arguments saisis par l’utilisateur n’est pas égal au nombre attendu (1), le programme affiche un message d’erreur et s’arrête.
 Ensuite, on déclare deux variables : OK et NOK, initialisées à 0.
+
 Le programme lit ensuite le fichier ligne par ligne. On vérifie pour chaque ligne la condition suivante. Si une ligne commence par l’expression https?://, elle est considérée comme valide :
 un message correspondant est affiché, et le compteur des lignes valides (OK) est incrémenté de 1.
+
 Si la ligne ne correspond pas à ce critère, un message indiquant qu’elle est invalide est affiché, et le compteur des lignes non valides (NOK) est incrémenté de 1.
+
 La boucle se termine lorsque toutes les lignes du fichier ont été lues.
 Enfin, le programme affiche le nombre de liens valides et non valides.
