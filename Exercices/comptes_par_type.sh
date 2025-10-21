@@ -1,6 +1,6 @@
+DATADIR=$1
+ANNEE=$2
+TYPE=$3
+#DIR="/home/tupikina/Exercice1/ann"
 
-CHEMIN=$1
-TYPE_ENTITE=$2
-
-
-cat "$CHEMIN"* | grep $TYPE_ENTITE | wc -l
+cat $DATADIR/$ANNEE/*.ann | grep "$TYPE" | wc -l

@@ -8,3 +8,14 @@ En revanche, je n’ai pas réussi tout de suite à créer une arborescence de f
 
 ## 14/10/2025
 Les exercices 1 et 2a de la nouvelle feuille n'étaient pas très compliqués et ils m'ont permit de m'entraîner à utiliser les pipes et les variables du langage Power shell. Par contre, l'exercice 2b m'a bloqué et je n'ai réussi qu'à afficher les lignes qui contiennent les Locations par ordre alphabétique des lieux indiqués pour une année et un mois donnés. Pour l'instant je ne sais pas comment séparer les noms de lieux du reste du contenu des lignes pour les traiter après (compter le nombre de citations de chaque lieux etc). Je n'ai pas réussi à faire la validation des arguments non plus.
+
+## 21/10/2025
+La description du code du diapo Unix.
+Le programme accepte un seul argument, qui est un fichier contenant une liste de liens URL.
+Si le nombre d’arguments saisis par l’utilisateur n’est pas égal au nombre attendu (1), le programme affiche un message d’erreur et s’arrête.
+Ensuite, on déclare deux variables : OK et NOK, initialisées à 0.
+Le programme lit ensuite le fichier ligne par ligne. On vérifie pour chaque ligne la condition suivante. Si une ligne commence par l’expression https?://, elle est considérée comme valide :
+un message correspondant est affiché, et le compteur des lignes valides (OK) est incrémenté de 1.
+Si la ligne ne correspond pas à ce critère, un message indiquant qu’elle est invalide est affiché, et le compteur des lignes non valides (NOK) est incrémenté de 1.
+La boucle se termine lorsque toutes les lignes du fichier ont été lues.
+Enfin, le programme affiche le nombre de liens valides et non valides.

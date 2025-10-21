@@ -1,4 +1,33 @@
-AN=$1
-MOIS=$2
+if [ $# -ne 4 ]
+then
+    echo "nombre d'arguments incorrect"
+    exit
+fi
 
-cat "/home/tupikina/Exercice1/ann/$AN/${AN}_$MOIS"* | grep Location | sort -k5
+DATADIR=$1
+ANNEE=$2
+MOIS=$3
+TOPN=$4
+
+if [ ! -d $DATADIR ]
+then
+    echo "$DATADIR n'est pas un dossier"
+    exit
+fi
+
+if [ -d "$DATADIR/2016" ] || [ -d "$DATADIR/2017" ] || [ -d "$DATADIR/2018" ]
+then
+    echo "$DATADIR n'est probablememnt pas le bon dossier"
+fi
+
+if [[ ! $ANNEE =~ ^[0-9]{4}$ ]]
+then
+    echo "$ANNEE n'est pas un bon format pour une année"
+    exit
+fi
+
+cd $DATADIR
+
+cat ./${ANNEE}/${ANNEE}_${MOIS}*.ann | grep Location | cut -f3 | sort | uniq -c | sort -n | head -n $TOPN
+
+
