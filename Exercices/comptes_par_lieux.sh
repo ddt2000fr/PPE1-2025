@@ -20,11 +20,6 @@ then
     echo "$DATADIR n'est probablememnt pas le bon dossier"
 fi
 
-if [[ ! $ANNEE =~ ^[0-9]{4}$ ]]
-then
-    echo "$ANNEE n'est pas un bon format pour une année"
-    exit
-fi
 
 cd $DATADIR
 
