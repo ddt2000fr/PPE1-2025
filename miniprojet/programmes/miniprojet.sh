@@ -7,7 +7,43 @@ fi
 FICHIER_URL=$1
 FICHIER_SORTIE=$2
 
-echo -e "<html>\n<head>\n<title>Tableau des résultats de miniprojet</title>\n<meta charset=\"UTF-8\" />\n</head>\n<body>\n<table>\n<tr><th>Number</th><th>URL</th><th>HTTP_code</th><th>Encoding</th><th>Words</th></tr>" > $FICHIER_SORTIE
+echo -e '<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tableau des résultats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.8.1/superhero/bulmaswatch.min.css">
+  </head>
+
+  <body>
+      <div class="container">
+
+
+        <div class="hero has-text-centered">
+          <div class="hero-body">
+            <h1 class="title">
+              Tableau des résultats
+            </h1>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-three-quarters">
+
+            <div class="box">
+
+              <table class="table is-bordered is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Number</th>
+                    <th>URL</th>
+                    <th>HTTP_code</th>
+                    <th>Encoding</th>
+                    <th>Words</th>
+                  </tr>
+                </thead>
+
+                <tbody>' > $FICHIER_SORTIE
 lineno=1
 while read -r line;
 do
@@ -18,4 +54,15 @@ do
     lineno=$(expr $lineno + 1)
 done < $FICHIER_URL;
 
-echo -e "</table>\n</body>\n</html>" >> $FICHIER_SORTIE
+echo -e '</tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+  </body>
+</html>' >> $FICHIER_SORTIE
