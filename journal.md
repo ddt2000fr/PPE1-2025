@@ -39,3 +39,9 @@ C’est alors que j’ai compris qu’il restait encore des caractères de retou
 ## 10/11/2025
 
 J'ai réussi à récuperer le nom le type d'encodage de la page web sans information extra grâce à la combinaison de commandes apprises pendant la séance de correction du miniproget, commande grep et commande cut. J'ai aussi ajouté un deuxième paramètre/argument FICHIER_SORTIE dans mon code.
+
+## 18/11/2025
+
+Tout d'abord, j’ai regardé les styles de Bulma et j’ai choisi celui qui me plaisait. Ensuite, j’ai pris du temps pour comprendre la structure d’un fichier HTML et où ajouter les informations concernant le style CSS. Je me suis basée sur le layout du site de l’exemple donné par les professeurs, 5_index_3col.html.
+
+Au début, je n’ai pas réussi à relier la page contenant mon tableau à la page principale (ajouter le lien). Mais je me suis rendu compte qu’il suffisait d’utiliser le chemin relatif vers la page du tableau, et non le chemin absolu, et le problème a été résolu.
